@@ -1,26 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Nav from "@/components/portfolio/Nav";
+import Hero from "@/components/portfolio/Hero";
+import About from "@/components/portfolio/About";
+import Skills from "@/components/portfolio/Skills";
+import Experience from "@/components/portfolio/Experience";
+import Projects from "@/components/portfolio/Projects";
+import Certifications from "@/components/portfolio/Certifications";
+import Achievements from "@/components/portfolio/Achievements";
+import Contact from "@/components/portfolio/Contact";
+import Footer from "@/components/portfolio/Footer";
+import CursorGlow from "@/components/portfolio/CursorGlow";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Sivaram Krishna — Data Analyst & Automation Engineer" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Sivaram Krishna, a B.Tech Data Science student specializing in Power BI dashboards, workflow automation, and real-time data solutions.",
+      },
+      { property: "og:title", content: "Sivaram Krishna — Data Analyst Portfolio" },
+      { property: "og:description", content: "Data Analytics, Power BI, Power Automate, and automation portfolio." },
+      { property: "og:type", content: "website" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="relative min-h-screen">
+      <CursorGlow />
+      <Nav />
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Certifications />
+      <Achievements />
+      <Contact />
+      <Footer />
+    </main>
+  );
 }
