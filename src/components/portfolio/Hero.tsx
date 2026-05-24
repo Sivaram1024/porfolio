@@ -122,7 +122,8 @@ export default function Hero() {
           <div className="absolute inset-0 gradient-bg blur-3xl opacity-40 rounded-full" />
           <div className="relative glass-strong rounded-3xl p-3 animate-pulse-glow">
             <img src={profile} alt="Sivaram Krishna" width={768} height={768}
-              className="w-full aspect-square object-cover rounded-2xl" />
+              className="w-full aspect-square rounded-2xl object-cover [object-position:center_center]" />
+
             <div className="absolute -bottom-4 -left-4 glass-strong rounded-2xl p-3 flex items-center gap-2 animate-float">
               <div className="w-9 h-9 rounded-lg gradient-bg grid place-items-center">
                 <BarChart3 className="w-4 h-4" />
