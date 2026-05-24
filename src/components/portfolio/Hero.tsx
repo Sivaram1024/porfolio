@@ -93,7 +93,7 @@ export default function Hero() {
             <a href="#projects" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl gradient-bg text-primary-foreground font-medium glow-hover">
               View Projects <ArrowRight className="w-4 h-4" />
             </a>
-            <a href="#" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass-strong font-medium hover:bg-white/10 transition">
+            <a href="/Sivaram_Resume.pdf" download="Sivaram_Resume.pdf" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass-strong font-medium hover:bg-white/10 transition">
               <Download className="w-4 h-4" /> Download Resume
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass font-medium hover:bg-white/10 transition">
