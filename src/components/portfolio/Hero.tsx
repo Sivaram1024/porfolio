@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Github, Linkedin, Mail, Download, ArrowRight, BarChart3, LineChart, Activity, Database } from "lucide-react";
-import profile from "@/assets/profile.jpg";
+import profile from "@/assets/profile.png";
 
 const roles = [
   "Data Analyst",
