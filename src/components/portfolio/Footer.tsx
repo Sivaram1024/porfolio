@@ -21,9 +21,21 @@ export default function Footer() {
           ))}
         </nav>
         <div className="flex gap-3">
-          {[Github, Linkedin, Mail].map((Icon, i) => (
-            <a key={i} href="#" className="w-9 h-9 grid place-items-center rounded-lg glass hover:gradient-bg transition">
-              <Icon className="w-4 h-4" />
+          {[
+            { Icon: Github, href: "https://github.com/Sivaram1024", label: "GitHub Profile" },
+            { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn Profile" },
+            { Icon: Mail, href: "mailto:sivaram@example.com", label: "Send Email" },
+          ].map(({ Icon, href, label }, i) => (
+            <a
+              key={i}
+              href={href}
+              title={label}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative w-9 h-9 grid place-items-center rounded-lg glass hover:gradient-bg transition-all duration-300 hover:scale-110 hover:shadow-[0_0_16px_oklch(0.68_0.21_280/0.5)] group"
+              aria-label={label}
+            >
+              <Icon className="w-4 h-4 group-hover:text-primary-foreground transition-colors" />
             </a>
           ))}
         </div>

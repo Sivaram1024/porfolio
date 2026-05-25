@@ -99,12 +99,19 @@ export default function Hero() {
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}
             className="mt-8 flex gap-3">
             {[
-              { Icon: Github, href: "https://github.com" },
-              { Icon: Linkedin, href: "https://linkedin.com" },
-              { Icon: Mail, href: "mailto:sivaram@example.com" },
-            ].map(({ Icon, href }, idx) => (
-              <a key={idx} href={href} className="w-10 h-10 grid place-items-center rounded-xl glass hover:gradient-bg transition-all hover:scale-110">
-                <Icon className="w-4 h-4" />
+              { Icon: Github, href: "https://github.com/Sivaram1024", label: "GitHub Profile", external: true },
+              { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn Profile", external: true },
+              { Icon: Mail, href: "mailto:sivaram@example.com", label: "Send Email", external: false },
+            ].map(({ Icon, href, label, external }, idx) => (
+              <a
+                key={idx}
+                href={href}
+                title={label}
+                {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                className="relative w-10 h-10 grid place-items-center rounded-xl glass hover:gradient-bg transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_oklch(0.68_0.21_280/0.5)] group"
+                aria-label={label}
+              >
+                <Icon className="w-4 h-4 group-hover:text-primary-foreground transition-colors" />
               </a>
             ))}
           </motion.div>
