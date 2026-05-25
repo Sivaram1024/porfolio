@@ -100,8 +100,8 @@ export default function Hero() {
             className="mt-8 flex gap-3">
             {[
               { Icon: Github, href: "https://github.com/Sivaram1024", label: "GitHub Profile", external: true },
-              { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn Profile", external: true },
-              { Icon: Mail, href: "mailto:sivaram@example.com", label: "Send Email", external: false },
+              { Icon: Linkedin, href: "https://www.linkedin.com/in/sivaram2410/", label: "LinkedIn Profile", external: true },
+              { Icon: Mail, href: "mailto:sivaramkrishna2410@gmail.com", label: "Send Email", external: false },
             ].map(({ Icon, href, label, external }, idx) => (
               <a
                 key={idx}
