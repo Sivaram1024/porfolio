@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 2. Global Navigation Bar is permanently fixed at bottom-center
-
-
   // 3. Hamburger Menu Drawer Toggle
   const menuToggle = document.getElementById("menu-toggle");
   const mobileNav = document.getElementById("mobile-nav");
@@ -301,39 +299,6 @@ document.addEventListener("DOMContentLoaded", () => {
     createClickBurst(e.clientX, e.clientY);
   }, { passive: true });
 
-  // 5.5. Statistics Number Count-Up Animation
-  const statNumbers = document.querySelectorAll(".hero-stat-number");
-  if (statNumbers.length > 0) {
-    const countObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const target = parseInt(entry.target.getAttribute("data-target"));
-          const duration = 1800; // ms
-          const startTime = performance.now();
-          
-          function updateCount(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const easeProgress = progress * (2 - progress); // Ease out quad
-            const value = Math.floor(easeProgress * target);
-            
-            entry.target.textContent = value + "+";
-            
-            if (progress < 1) {
-              requestAnimationFrame(updateCount);
-            } else {
-              entry.target.textContent = target + "+";
-            }
-          }
-          
-          requestAnimationFrame(updateCount);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    
-    statNumbers.forEach(num => countObserver.observe(num));
-  }
 
   // 6. Viewport Scroll Reveal Observer
   const reveals = document.querySelectorAll(".reveal");
@@ -355,9 +320,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     reveals.forEach((el) => revealObserver.observe(el));
   }
-
-
-
 
   // 9. Project Filtering Logic
   const filterBtns = document.querySelectorAll(".filter-btn");
@@ -528,21 +490,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute("id");
           
-          desktopLinks.forEach((link) => {
-            if (link.getAttribute("href") === `#${id}`) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
-          });
-
-          mobileLinks.forEach((link) => {
-            if (link.getAttribute("href") === `#${id}`) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
-          });
+          const updateNav = (links) => {
+            links.forEach((link) => {
+              link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+            });
+          };
+          updateNav(desktopLinks);
+          updateNav(mobileLinks);
         }
       });
     },
@@ -558,12 +512,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const backToTopBtn = document.getElementById("back-to-top");
   if (backToTopBtn) {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.add("active");
-      } else {
-        backToTopBtn.classList.remove("active");
-      }
-    });
+      backToTopBtn.classList.toggle("active", window.scrollY > 300);
+    }, { passive: true });
   }
 
   // 14. Section Heading Hover Animation Trigger
@@ -724,7 +674,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
+    let isVisible = true;
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible && !animId) {
+          animId = requestAnimationFrame(animate);
+        }
+      });
+    }, { threshold: 0 });
+    heroObserver.observe(heroSection);
+
     function animate() {
+      if (!isVisible) {
+        animId = null;
+        return;
+      }
       ctx.clearRect(0, 0, width, height);
 
       // 1. Update and draw particles
@@ -780,13 +745,12 @@ document.addEventListener("DOMContentLoaded", () => {
       animId = requestAnimationFrame(animate);
     }
 
-
     // Mouse Movement Tracking
     heroSection.addEventListener("mousemove", (e) => {
       const rect = heroSection.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
-    });
+    }, { passive: true });
 
     heroSection.addEventListener("mouseleave", () => {
       mouse.x = null;
@@ -809,6 +773,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", resize);
 
     resize();
-    animate();
+    animId = requestAnimationFrame(animate);
   })();
 });
