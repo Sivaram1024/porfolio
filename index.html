@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Siva Rama Krishna — Data Analyst &amp; Automation Engineer</title>
+  <meta name="description"
+    content="Portfolio of Siva Rama Krishna, a B.Tech Data Science student specializing in Power BI dashboards, workflow automation, and real-time data solutions." />
+  <meta property="og:title" content="Siva Rama Krishna — Data Analyst Portfolio" />
+  <meta property="og:description" content="Data Analytics, Power BI, Power Automate, and automation portfolio." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Global Floating Navigation Bar -->
+  <header class="hero-quick-nav">
+    <div class="nav-box">
+      <nav class="nav-links">
+        <a href="#hero" class="nav-item active" aria-label="Home"><i data-lucide="home"></i></a>
+        <a href="#about" class="nav-item"><i data-lucide="user"></i> <span>About</span></a>
+        <a href="#skills" class="nav-item"><i data-lucide="brain"></i> <span>Skills</span></a>
+        <a href="#experience" class="nav-item"><i data-lucide="briefcase"></i> <span>Experience</span></a>
+        <a href="#projects" class="nav-item"><i data-lucide="folder-kanban"></i> <span>Projects</span></a>
+        <a href="#certifications" class="nav-item"><i data-lucide="award"></i> <span>Certificates</span></a>
+        <a href="#contact" class="nav-item nav-cta-talk"><span class="talk-text">Let's Talk</span> <i
+            data-lucide="arrow-right" class="talk-arrow"></i></a>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+        <div class="burger">
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+    <!-- Mobile Drawer Nav -->
+    <div id="mobile-nav" class="mobile-nav glass-strong">
+      <a href="#hero" class="nav-item-mobile active"><i data-lucide="home"></i> Home</a>
+      <a href="#about" class="nav-item-mobile"><i data-lucide="user"></i> About</a>
+      <a href="#skills" class="nav-item-mobile"><i data-lucide="brain"></i> Skills</a>
+      <a href="#experience" class="nav-item-mobile"><i data-lucide="briefcase"></i> Experience</a>
+      <a href="#projects" class="nav-item-mobile"><i data-lucide="folder-kanban"></i> Projects</a>
+      <a href="#certifications" class="nav-item-mobile"><i data-lucide="award"></i> Certificates</a>
+      <a href="#contact" class="nav-item-mobile nav-cta-talk-mobile"><span class="talk-text">Let's Talk</span> <i
+          data-lucide="arrow-right" class="talk-arrow"></i></a>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section id="hero">
+    <!-- Interactive Constellation Canvas Background -->
+    <canvas id="constellation-canvas" aria-hidden="true"></canvas>
+
+    <!-- Subtle Decorative Background Elements -->
+    <div class="hero-bg-overlay pointer-events-none"></div>
+    <div class="hero-dots-pattern pointer-events-none"></div>
+    <div class="hero-subtle-glow pointer-events-none"></div>
+    <div class="hero-abstract-line pointer-events-none"></div>
+
+    <!-- Top Utility Bar: Live Clock & Social Icons -->
+    <div class="hero-top-bar hero-anim-6">
+      <div class="hero-clock" id="hero-clock" aria-label="Live Clock">
+        <i data-lucide="clock" class="clock-icon"></i>
+        <span id="hero-clock-time">--:--:--</span>
+        <span class="clock-sep">•</span>
+        <span id="hero-clock-date">---, --- --</span>
+      </div>
+
+      <div class="hero-social-icons">
+        <a href="https://github.com/Sivaram1024" target="_blank" rel="noopener noreferrer"
+          class="social-icon-btn github" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sivaram2410" target="_blank" rel="noopener noreferrer"
+          class="social-icon-btn linkedin" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:sivaramkrishna2410@gmail.com" class="social-icon-btn email" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/919391861893" target="_blank" rel="noopener noreferrer" class="social-icon-btn whatsapp"
+          aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Centered Hero Main Content -->
+    <div class="container hero-center-container">
+      <div class="hero-center-content">
+        <!-- Greeting -->
+        <div class="hero-greeting hero-anim-1" tabindex="0" aria-label="Greeting">
+          <span class="wave-hand">👋</span>
+          <span id="hero-greeting-text" class="greeting-text">
+            Hell<span class="main-o">o</span><span class="extra-o-wrapper"></span><span class="excl-mark">!</span>
+          </span>
+        </div>
+
+        <!-- Main Name -->
+        <h1 class="hero-name-title hero-anim-2">Siva Rama Krishna</h1>
+
+        <!-- Animated Role -->
+        <div class="hero-role-box hero-anim-3">
+          <span id="typewriter" class="hero-typewriter-span"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+
+        <!-- Short Professional Tagline -->
+        <p class="hero-tagline hero-anim-4">
+          Building intelligent data-driven solutions through AI, analytics, and automation.
+        </p>
+
+        <!-- Call-To-Action Buttons -->
+        <div class="hero-cta-group hero-anim-5">
+          <a href="#projects" class="btn btn-hero-primary">
+            View Projects <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
+          </a>
+          <a href="/Sivaram_Krishna_Resume.pdf" download="Sivaram_Krishna_Resume.pdf" target="_blank"
+            rel="noopener noreferrer" class="btn btn-hero-secondary">
+            <i data-lucide="download" style="width: 1rem; height: 1rem;"></i> Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtle Floating Keywords -->
+    <div class="hero-keywords-wrapper pointer-events-none">
+      <span class="floating-keyword keyword-1">Python</span>
+      <span class="floating-keyword keyword-2">AI</span>
+      <span class="floating-keyword keyword-3">Machine Learning</span>
+      <span class="floating-keyword keyword-4">Data Analytics</span>
+      <span class="floating-keyword keyword-5">Power BI</span>
+      <span class="floating-keyword keyword-6">Automation</span>
+      <span class="floating-keyword keyword-7">SQL</span>
+      <span class="floating-keyword keyword-8">Dashboard</span>
+      <span class="floating-keyword keyword-9">Excel</span>
+    </div>
+  </section>
+
+  <!-- 3. About Me Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow gradient-text">About Me</div>
+        <h2 class="section-title">
+          Designing Data Solutions, <span class="gradient-text">Not Just Reports</span>
+        </h2>
+      </div>
+
+      <div class="about-redesigned-grid">
+        <!-- Left Side: Profile Picture with decorative frame and elements -->
+        <div class="about-visual reveal">
+          <div class="about-image-wrapper">
+            <div class="about-image-glow"></div>
+            <img src="assets/profile.png" alt="Sivaram Krishna" class="about-profile-img" width="384" height="384"
+              loading="lazy" />
+            <!-- Floating metrics on about section -->
+            <div class="about-floating-badge badge-projects animate-float" style="animation-duration: 6s;">
+              <i data-lucide="folder-kanban"></i>
+              <span>2+ Projects Built</span>
+            </div>
+            <div class="about-floating-badge badge-vision animate-float"
+              style="animation-delay: 1.5s; animation-duration: 8s;">
+              <i data-lucide="sparkles"></i>
+              <span>Data-Driven Vision</span>
+            </div>
+          </div>
+          <!-- Abstract Background Shapes -->
+          <div class="about-shape shape-dots"></div>
+          <div class="about-shape shape-circle"></div>
+        </div>
+
+        <!-- Right Side: Personal summary, Specializations, Education, Highlights -->
+        <div class="about-content reveal" style="transition-delay: 0.15s;">
+          <div class="about-text-wrapper">
+            <h3 class="about-subtitle">Professional Summary</h3>
+            <p>
+              I’m a <span>B.Tech 4th-year Data Science student</span> with strong problem-solving abilities and hands-on
+              experience in Data Analytics, workflow automation, dashboard development, and real-time data solutions.
+            </p>
+            <p>
+              I enjoy building intelligent, scalable systems that improve operational efficiency and automate real-world
+              business processes —
+              turning complex raw data into clear, actionable decisions.
+            </p>
+
+            <h3 class="about-subtitle">Specializations</h3>
+            <div class="spec-list">
+              <span class="spec-badge glass">Excel</span>
+              <span class="spec-badge glass">Power BI Dashboards</span>
+              <span class="spec-badge glass">Power Automate</span>
+              <span class="spec-badge glass">SharePoint</span>
+              <span class="spec-badge glass">Snowflake</span>
+              <span class="spec-badge glass">Python</span>
+              <span class="spec-badge glass">SQL</span>
+              <span class="spec-badge glass">Machine Learning</span>
+            </div>
+
+            <h3 class="about-subtitle">Quick Highlights</h3>
+            <ul class="about-highlights-list">
+              <li><i data-lucide="check-circle-2"></i> Experienced in building production-ready automated workflows</li>
+              <li><i data-lucide="check-circle-2"></i> Strong foundation in AI/ML modeling and statistical analysis</li>
+              <li><i data-lucide="check-circle-2"></i> Proactive at turning raw datasets into interactive dashboards
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Tech Stack Section -->
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow gradient-text">Skills</div>
+        <h2 class="section-title">
+          My <span class="gradient-text">Tech Stack</span>
+        </h2>
+        <p class="section-subtitle">
+          Technologies and tools I use to build data-driven applications, automate workflows, and develop intelligent
+          solutions.
+        </p>
+      </div>
+
+      <!-- Programming Languages -->
+      <h3 class="skills-category-title">
+        <i data-lucide="code2" style="width: 1.15rem; height: 1.15rem;"></i> Programming Languages
+      </h3>
+      <div class="skills-category-grid">
+        <!-- Python (Primary) -->
+        <div class="skill-card glass-strong reveal primary-skill" style="transition-delay: 0s;">
+          <span class="skill-badge">Core</span>
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Python</h4>
+          </div>
+        </div>
+        <!-- Java (Secondary) -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.05s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Java</h4>
+          </div>
+        </div>
+        <!-- C -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.1s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">C</h4>
+          </div>
+        </div>
+        <!-- HTML5 -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.15s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">HTML5</h4>
+          </div>
+        </div>
+        <!-- CSS3 -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.2s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">CSS3</h4>
+          </div>
+        </div>
+        <!-- JavaScript (Secondary) -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.25s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+              alt="JavaScript" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">JavaScript</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Analytics -->
+      <h3 class="skills-category-title">
+        <i data-lucide="bar-chart-3" style="width: 1.15rem; height: 1.15rem;"></i> Data Analytics
+      </h3>
+      <div class="skills-category-grid">
+        <!-- Excel (Primary) -->
+        <div class="skill-card glass-strong reveal primary-skill" style="transition-delay: 0s;">
+          <span class="skill-badge">Core</span>
+          <div class="skill-card-icon-wrapper">
+            <img src="assets/excel.svg" alt="Microsoft Excel" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Excel</h4>
+          </div>
+        </div>
+        <!-- Power BI (Primary) -->
+        <div class="skill-card glass-strong reveal primary-skill" style="transition-delay: 0.05s;">
+          <span class="skill-badge">Core</span>
+          <div class="skill-card-icon-wrapper">
+            <img src="assets/powerbi.svg" alt="Microsoft Power BI" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Power BI</h4>
+          </div>
+        </div>
+        <!-- Power Automate (Primary) -->
+        <div class="skill-card glass-strong reveal primary-skill" style="transition-delay: 0.1s;">
+          <span class="skill-badge">Core</span>
+          <div class="skill-card-icon-wrapper">
+            <img src="assets/powerautomate.svg" alt="Microsoft Power Automate" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Power Automate</h4>
+          </div>
+        </div>
+        <!-- SharePoint (Primary) -->
+        <div class="skill-card glass-strong reveal primary-skill" style="transition-delay: 0.15s;">
+          <span class="skill-badge">Core</span>
+          <div class="skill-card-icon-wrapper">
+            <img src="assets/sharepoint.svg" alt="Microsoft SharePoint" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">SharePoint</h4>
+          </div>
+        </div>
+        <!-- Snowflake -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.2s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="assets/snowflake.svg" alt="Snowflake" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Snowflake</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI & Machine Learning -->
+      <h3 class="skills-category-title">
+        <i data-lucide="brain" style="width: 1.15rem; height: 1.15rem;"></i> AI &amp; Machine Learning
+      </h3>
+      <div class="skills-category-grid">
+        <!-- Machine Learning (Primary) -->
+        <div class="skill-card glass-strong reveal primary-skill" style="transition-delay: 0s;">
+          <span class="skill-badge">Core</span>
+          <div class="skill-card-icon-wrapper">
+            <i data-lucide="brain" class="skill-card-lucide-icon"></i>
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Machine Learning</h4>
+          </div>
+        </div>
+        <!-- Scikit-Learn -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.05s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
+              alt="Scikit-Learn" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Scikit-Learn</h4>
+          </div>
+        </div>
+        <!-- TensorFlow -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.1s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+              alt="TensorFlow" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">TensorFlow</h4>
+          </div>
+        </div>
+        <!-- Pandas -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.15s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="Pandas"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Pandas</h4>
+          </div>
+        </div>
+        <!-- NumPy -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.2s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="NumPy"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">NumPy</h4>
+          </div>
+        </div>
+        <!-- Matplotlib -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.25s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg"
+              alt="Matplotlib" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Matplotlib</h4>
+          </div>
+        </div>
+        <!-- OpenCV -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.3s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg" alt="OpenCV"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">OpenCV</h4>
+          </div>
+        </div>
+        <!-- NLTK -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.35s;">
+          <div class="skill-card-icon-wrapper">
+            <i data-lucide="sparkles" class="skill-card-lucide-icon"></i>
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">NLTK</h4>
+          </div>
+        </div>
+        <!-- Jupyter Notebook -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.4s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg"
+              alt="Jupyter Notebook" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Jupyter Notebook</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <h3 class="skills-category-title">
+        <i data-lucide="database" style="width: 1.15rem; height: 1.15rem;"></i> Databases
+      </h3>
+      <div class="skills-category-grid">
+        <!-- MySQL (Secondary) -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">MySQL</h4>
+          </div>
+        </div>
+        <!-- MongoDB (Secondary) -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.05s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+              alt="MongoDB" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">MongoDB</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Development Tools -->
+      <h3 class="skills-category-title">
+        <i data-lucide="wrench" style="width: 1.15rem; height: 1.15rem;"></i> Development Tools
+      </h3>
+      <div class="skills-category-grid">
+        <!-- Git -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Git</h4>
+          </div>
+        </div>
+        <!-- GitHub (Secondary) -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.05s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://www.vectorlogo.zone/logos/github/github-tile.svg" alt="GitHub" class="skill-card-icon"
+              loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">GitHub</h4>
+          </div>
+        </div>
+        <!-- VS Code (Secondary) -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.1s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+              alt="VS Code" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">VS Code</h4>
+          </div>
+        </div>
+        <!-- Jupyter Notebook -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.15s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg"
+              alt="Jupyter Notebook" class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Jupyter</h4>
+          </div>
+        </div>
+        <!-- Postman (Secondary) -->
+        <div class="skill-card glass-strong reveal" style="transition-delay: 0.2s;">
+          <div class="skill-card-icon-wrapper">
+            <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman"
+              class="skill-card-icon" loading="lazy" />
+          </div>
+          <div class="skill-card-info">
+            <h4 class="skill-card-name">Postman</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Experience Timeline Section -->
+  <section id="experience" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow gradient-text">Experience</div>
+        <h2 class="section-title">
+          My <span class="gradient-text">Journey</span>
+        </h2>
+      </div>
+
+      <div class="experience-container">
+        <div class="experience-timeline-line"></div>
+        <div class="experience-list">
+          <!-- Item 1 -->
+          <div class="reveal">
+            <div class="experience-item left">
+              <div class="experience-dot gradient-bg"></div>
+              <div class="experience-card glass-strong glow-hover">
+                <div class="experience-card-header">
+                  <div class="experience-card-icon gradient-bg">
+                    <i data-lucide="briefcase" style="width: 1.25rem; height: 1.25rem;"></i>
+                  </div>
+                  <div>
+                    <h3 class="experience-card-role">Data Specialist Intern</h3>
+                    <div class="experience-card-org">Technical Hub Pvt. Ltd.</div>
+                  </div>
+                </div>
+                <div class="experience-card-date">May – June 2025</div>
+                <p class="experience-card-desc">
+                  Worked on real-time data solutions, workflow automation, and analytics-driven process optimization to
+                  improve operational efficiency.
+                </p>
+                <div class="experience-card-badges">
+                  <span class="experience-badge glass">Power Automate</span>
+                  <span class="experience-badge glass">SharePoint</span>
+                  <span class="experience-badge glass">Excel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="reveal" style="transition-delay: 0.1s;">
+            <div class="experience-item right">
+              <div class="experience-dot gradient-bg"></div>
+              <div class="experience-card glass-strong glow-hover">
+                <div class="experience-card-header">
+                  <div class="experience-card-icon gradient-bg">
+                    <i data-lucide="briefcase" style="width: 1.25rem; height: 1.25rem;"></i>
+                  </div>
+                  <div>
+                    <h3 class="experience-card-role">Data Analytics Intern</h3>
+                    <div class="experience-card-org">SmartInternz (APSCHE Govt.-recognised)</div>
+                  </div>
+                </div>
+                <div class="experience-card-date">Jul – Aug 2025</div>
+                <p class="experience-card-desc">
+                  Focused on data analytics with Tableau — developed interactive dashboards, applied analytical thinking
+                  to transform complex data, and gained hands-on exposure to end-to-end analytics workflows.
+                </p>
+                <div class="experience-card-badges">
+                  <span class="experience-badge glass">Tableau</span>
+                  <span class="experience-badge glass">Data Analytics</span>
+                  <span class="experience-badge glass">Visualization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Projects Section -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow gradient-text">Projects</div>
+        <h2 class="section-title">
+          Featured <span class="gradient-text">Work</span>
+        </h2>
+        <p class="section-subtitle">
+          Real-world systems where automation meets analytics.
+        </p>
+      </div>
+
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="All">All</button>
+        <button class="filter-btn" data-filter="Automation">Automation</button>
+        <button class="filter-btn" data-filter="Analytics">Analytics</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card-wrapper reveal" data-category="Analytics Automation" style="transition-delay: 0s;">
+          <article class="project-card glass-strong glow-hover">
+            <div class="project-card-banner">
+              <img src="assets/opticrop_hero.jpg" alt="OptiCrop | Smart Agricultural Production Optimization Engine"
+                class="project-card-img" loading="lazy" />
+              <div class="project-card-banner-icon">
+                <div class="project-icon-box glass-strong">
+                  <i data-lucide="sprout"></i>
+                </div>
+              </div>
+              <span class="project-card-category glass">Analytics &amp; Automation</span>
+            </div>
+            <div class="project-card-content">
+              <h3 class="project-card-title">OptiCrop | Smart Agricultural Production Optimization Engine</h3>
+              <p class="project-card-desc">
+                An AI-powered agricultural platform that analyzes soil and environmental data to recommend the most
+                suitable crops using machine learning and interactive analytics.
+              </p>
+              <div class="project-card-features">
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span> AI Crop Recommendation
+                </div>
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span> Soil Nutrient Analysis
+                </div>
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span> Crop Suitability Prediction
+                </div>
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span> Interactive Analytics Dashboard
+                </div>
+              </div>
+              <div class="project-card-stack">
+                <span class="project-stack-tag glass">Python</span>
+                <span class="project-stack-tag glass">Flask</span>
+                <span class="project-stack-tag glass">Scikit-Learn</span>
+                <span class="project-stack-tag glass">Pandas</span>
+                <span class="project-stack-tag glass">Chart.js</span>
+                <span class="project-stack-tag glass">Docker</span>
+              </div>
+              <div class="project-card-links">
+                <a href="https://opticrop-skill-wallet.onrender.com/" target="_blank" rel="noopener noreferrer"
+                  class="project-link gradient-text">
+                  <i data-lucide="external-link" style="width: 1rem; height: 1rem;"></i> Live
+                </a>
+                <a href="https://github.com/Sivaram1024/OptiCrop-skill-wallet" target="_blank" rel="noopener noreferrer"
+                  class="project-link project-link-code">
+                  <i data-lucide="github" style="width: 1rem; height: 1rem;"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card-wrapper reveal" data-category="Analytics" style="transition-delay: 0.1s;">
+          <article class="project-card glass-strong glow-hover">
+            <div class="project-card-banner">
+              <img src="assets/coderadar_dashboard.png" alt="CodeRadar" class="project-card-img" loading="lazy" />
+              <div class="project-card-banner-icon">
+                <div class="project-icon-box glass-strong">
+                  <i data-lucide="bar-chart-3"></i>
+                </div>
+              </div>
+              <span class="project-card-category glass">Analytics</span>
+            </div>
+            <div class="project-card-content">
+              <h3 class="project-card-title">CodeRadar</h3>
+              <p class="project-card-desc">
+                A coding performance analytics platform that tracks student progress, visualizes coding activity, and
+                automates performance insights through interactive dashboards.
+              </p>
+              <div class="project-card-features">
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span> Dashboard Analytics
+                </div>
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span> Performance Tracking
+                </div>
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span> Leaderboard System
+                </div>
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span> Automated Email Alerts
+                </div>
+              </div>
+              <div class="project-card-stack">
+                <span class="project-stack-tag glass">Excel</span>
+                <span class="project-stack-tag glass">SharePoint</span>
+                <span class="project-stack-tag glass">Power Automate</span>
+                <span class="project-stack-tag glass">Power BI</span>
+              </div>
+              <div class="project-card-links">
+                <a href="https://adityagroup-my.sharepoint.com/:x:/g/personal/23mh1a4462_acoe_edu_in/IQBFNCnkTyAhT5R-vRi9qqCRAeZyk7bhzUrsQXwxvNIG7g0?e=F1rFFH"
+                  target="_blank" rel="noopener noreferrer" class="project-link gradient-text">
+                  <i data-lucide="external-link" style="width: 1rem; height: 1rem;"></i> Live
+                </a>
+                <a href="https://github.com/Sivaram1024/CodeRadar.git" target="_blank" rel="noopener noreferrer"
+                  class="project-link project-link-code">
+                  <i data-lucide="github" style="width: 1rem; height: 1rem;"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Certifications Section -->
+  <section id="certifications" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow gradient-text">Certifications</div>
+        <h2 class="section-title">
+          Verified <span class="gradient-text">Credentials</span>
+        </h2>
+      </div>
+
+      <div class="certifications-grid">
+        <!-- Cert 1 -->
+        <div class="reveal">
+          <div class="cert-card cert-deloitte glass-strong glow-hover">
+            <div class="cert-card-icon">
+              <img src="assets/deloitte.svg" alt="Deloitte Logo" class="cert-logo">
+            </div>
+            <div class="cert-org">Deloitte</div>
+            <h3 class="cert-title">Data Analytics Job Simulation</h3>
+            <a href="https://drive.google.com/file/d/1pt-SYE-3KTDGLE--Nu6LPPUX77MPvb5I/view?usp=drive_link"
+              target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+              Verify <i data-lucide="external-link" style="width: 0.75rem; height: 0.75rem;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="reveal" style="transition-delay: 0.05s;">
+          <div class="cert-card cert-ibm glass-strong glow-hover">
+            <div class="cert-card-icon">
+              <img src="assets/ibm.svg" alt="IBM Logo" class="cert-logo">
+            </div>
+            <div class="cert-org">IBM SkillsBuild</div>
+            <h3 class="cert-title">Data Certificate</h3>
+            <a href="https://drive.google.com/file/d/1oO0aY4IY0i5PW-3B18LbY5KMbEK31jxx/view?usp=drive_link"
+              target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+              Verify <i data-lucide="external-link" style="width: 0.75rem; height: 0.75rem;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="reveal" style="transition-delay: 0.1s;">
+          <div class="cert-card cert-snowflake glass-strong glow-hover">
+            <div class="cert-card-icon">
+              <img src="assets/snowflake.svg" alt="Snowflake Logo" class="cert-logo">
+            </div>
+            <div class="cert-org">Snowflake</div>
+            <h3 class="cert-title">Associate Certificate</h3>
+            <a href="https://drive.google.com/file/d/1YT2r49tfjypRQgnnNV8IhdqffqLxkNYJ/view?usp=drive_link"
+              target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+              Verify <i data-lucide="external-link" style="width: 0.75rem; height: 0.75rem;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="reveal" style="transition-delay: 0.15s;">
+          <div class="cert-card cert-oracle glass-strong glow-hover">
+            <div class="cert-card-icon">
+              <img src="assets/oracle.svg" alt="Oracle Logo" class="cert-logo">
+            </div>
+            <div class="cert-org">Oracle</div>
+            <h3 class="cert-title">Generative AI OCI Certification</h3>
+            <a href="https://drive.google.com/file/d/10hK2c3h9dIOaPEfbU7OH5htANHf4EtNH/view?usp=drive_link"
+              target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+              Verify <i data-lucide="external-link" style="width: 0.75rem; height: 0.75rem;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 5 -->
+        <div class="reveal" style="transition-delay: 0.2s;">
+          <div class="cert-card cert-microsoft glass-strong glow-hover">
+            <div class="cert-card-icon">
+              <img src="assets/microsoft.svg" alt="Microsoft Logo" class="cert-logo">
+            </div>
+            <div class="cert-org">Microsoft</div>
+            <h3 class="cert-title">Microsoft Certified: Developer Associate</h3>
+            <a href="https://drive.google.com/file/d/1wypA-fGcz782QGY8-Y8VotpV6OXn73rs/view?usp=drive_link"
+              target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+              Verify <i data-lucide="external-link" style="width: 0.75rem; height: 0.75rem;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Contact Section -->
+  <section id="contact" class="section-padding">
+    <div class="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] gradient-bg blur-3xl opacity-10 rounded-full">
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow gradient-text">Contact</div>
+        <h2 class="section-title">
+          Let's Build <span class="gradient-text">Data-Driven Solutions</span> Together
+        </h2>
+        <p class="section-subtitle">
+          Have a project, role, or idea in mind? Drop a message.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-info-card glass-strong">
+            <div class="contact-info-item">
+              <div class="contact-info-icon-box glass">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="contact-info-lbl">Email</div>
+                <div class="contact-info-val">sivaramkrishna2410@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon-box glass">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="contact-info-lbl">Phone</div>
+                <div class="contact-info-val">+91 93918 61893</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon-box glass">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div>
+                <div class="contact-info-lbl">LinkedIn</div>
+                <div class="contact-info-val">/in/sivaram2410</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon-box glass">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div>
+                <div class="contact-info-lbl">GitHub</div>
+                <div class="contact-info-val">@Sivaram1024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay: 0.1s;">
+          <form id="contact-form" class="contact-form glass-strong">
+            <div class="form-row">
+              <input required type="text" name="from_name" placeholder="Your name" class="form-input" />
+              <input required type="email" name="from_email" placeholder="Email" class="form-input" />
+            </div>
+            <input type="text" name="subject" placeholder="Subject" class="form-input" />
+            <textarea required name="from_message" rows="5" placeholder="Tell me about your project..."
+              class="form-textarea"></textarea>
+            <button type="submit" class="form-submit-btn" aria-label="Send Message">
+              <span class="btn-text">Send Message</span>
+              <i data-lucide="send" class="btn-icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Footer Section -->
+  <footer class="reveal footer-glass">
+    <div class="container footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="footer-logo-badge gradient-bg">SK</span>
+            <span class="gradient-text">Sivaram Krishna</span>
+          </div>
+          <p class="footer-tagline">Designed &amp; Developed by Sivaram Krishna.</p>
+        </div>
+
+
+
+        <div class="footer-socials">
+          <a href="https://github.com/Sivaram1024" target="_blank" rel="noopener noreferrer"
+            class="footer-social-btn glass" aria-label="GitHub Profile">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sivaram2410" target="_blank" rel="noopener noreferrer"
+            class="footer-social-btn glass" aria-label="LinkedIn Profile">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:sivaramkrishna2410@gmail.com" class="footer-social-btn glass" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/919391861893" target="_blank" rel="noopener noreferrer" class="footer-social-btn glass"
+            aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© <span id="current-year">2026</span> Sivaram Krishna. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#hero" id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </a>
+
+  <!-- Global Toast container -->
+  <div id="toast-container"></div>
+
+  <!-- 11. CDNs & Scripts -->
+  <!-- Lucide CDN for icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- EmailJS SDK CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="module" src="script.js"></script>
+  <script>
+    // Populate current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
